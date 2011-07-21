@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Find as Network </title>
+  <%= stylesheet_link_tag 'jquery-ui' %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+	
+	<div class="container">
+		<div id="message">
+     	<%= render :partial => 'layouts/message' %>
+    </div>
+		<header>
+			<%= image_tag("logo.jpg", :title => "Find as Network", :class => "round") %>
+			
+			<nav class="round">
+				<ul>
+					<li><%= link_to "Home", root_path %></li>
+					<li><%= link_to "Help", '#' %></li>
+					<% if user_signed_in? %>
+				    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+				  <% else %>
+				    <li><%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %></li>
+				  <% end %>
+				</ul>
+			</nav>
+	
+		</header>
+	  <div id='section' class="round">
+	    <%= yield %>
+	  </div>
+	</div>
+</body>
+</html>

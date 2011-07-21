@@ -1,0 +1,32 @@
+<% if flash[:error] or flash[:alert] %>
+
+  <% if flash[:error] %>
+	<div id="flash" class="ui-widget">
+		<div class="ui-state-error ui-corner-all" style="font-size: 70%; padding: 0 .7em; width: 30%;"> 
+			<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span> 
+			<%= flash[:error] %>
+			</p>
+		</div>
+	</div>
+	<% end %>
+  
+	<% if flash[:alert] %>
+		<div id="flash" class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="font-size: 70%; margin-top: 20px; padding: 0 .7em; width: 30%;"> 
+			<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+			<%= flash[:alert] %>
+			</p>
+		</div>
+	<% end %>
+<% end %>
+
+<% flash[:notice] = nil %>
+<% flash[:error] = nil %>
+
+
+<script>
+	flashFadeOut(3000, "linear");
+</script>
+
+		
+
