@@ -1,0 +1,27 @@
+<h1>Listing field_mappings</h1>
+
+<table>
+  <tr>
+    <th>Field</th>
+    <th>Data source</th>
+    <th>Field name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @field_mappings.each do |field_mapping| %>
+  <tr>
+    <td><%= field_mapping.field_id %></td>
+    <td><%= field_mapping.data_source_id %></td>
+    <td><%= field_mapping.field_name %></td>
+    <td><%= link_to 'Show', field_mapping %></td>
+    <td><%= link_to 'Edit', edit_field_mapping_path(field_mapping) %></td>
+    <td><%= link_to 'Destroy', field_mapping, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Field mapping', new_field_mapping_path %>

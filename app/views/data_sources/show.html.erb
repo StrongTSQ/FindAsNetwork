@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @data_source.name %>
+</p>
+
+<p>
+  <b>Hostname:</b>
+  <%= @data_source.hostname %>
+</p>
+<p>
+  <b>Database Type:</b>
+  <%= @data_source.database_type %>
+</p>
+<p>
+  <b>Ip:</b>
+  <%= @data_source.ip %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @data_source.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @data_source.password %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @data_source.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_data_source_path(@data_source) %> |
+<%= link_to 'Back', data_sources_path %>

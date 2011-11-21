@@ -1,0 +1,12 @@
+User - id:integer name:string email:string password:string
+Dream - id:integer name:string deadline:date time:string status:string
+Resource - id:integer name:string description:text
+Function - id:integer action:string object:string
+
+User has_many Dreams :through  => user_dream
+User has_many Resources :through => user_resource 
+Dream has_many Resources :through => dream_resource
+Resource has_many Functions :through => resource_function
+
+
+ 

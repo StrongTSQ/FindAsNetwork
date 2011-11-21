@@ -1,5 +1,22 @@
 Find::Application.routes.draw do
+  resources :field_mappings
+
+  resources :ontology_mappings
+
+  resources :data_sources
+
+
+  resources :queries
+
+  resources :properties
+
+  resources :fields
+
+  resources :ontologies
+
+  
   devise_for :users
+  match '/users/help' => 'users#help'
   match '/users/home'  => 'users#home'
   resources :users
   

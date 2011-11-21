@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Query sentence:</b>
+  <%= @query.query_sentence %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @query.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', queries_path %>

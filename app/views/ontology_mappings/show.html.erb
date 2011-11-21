@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ontology:</b>
+  <%= @ontology_mapping.ontology_id %>
+</p>
+
+<p>
+  <b>Data source:</b>
+  <%= @ontology_mapping.data_source_id %>
+</p>
+
+<p>
+  <b>Ontology name:</b>
+  <%= @ontology_mapping.ontology_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_ontology_mapping_path(@ontology_mapping) %> |
+<%= link_to 'Back', ontology_mappings_path %>

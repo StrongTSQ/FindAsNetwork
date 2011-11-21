@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  field_id: 1
+  data_source_id: 1
+  field_name: MyString
+
+two:
+  field_id: 1
+  data_source_id: 1
+  field_name: MyString

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  hostname: MyString
+  ip: MyString
+  username: MyString
+  password: MyString
+  desc: MyText
+
+two:
+  name: MyString
+  hostname: MyString
+  ip: MyString
+  username: MyString
+  password: MyString
+  desc: MyText

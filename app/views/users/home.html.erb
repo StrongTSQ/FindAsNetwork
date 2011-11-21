@@ -1,11 +1,17 @@
-<h1>Find as Network</h1>
 
-<p>
-  This is the home page for the
-  <%= link_to "Find as Network", users_home_path %>, where you can find what you want from your network.
+
+<h1>Find in Network</h1>
+
+<!-- <p>
+	This is the home page for Follow Your Dreams.
 </p>
-<% if user_signed_in? %>
-<%= link_to "Find now!", new_user_registration_path, :id => "clickme", :class => "signup_button round" %>
-<% else %>
-<%= link_to "Sign up now!", new_user_registration_path, :id => "clickme", :class => "signup_button round" %>
-<% end %>
+<p>  	
+	Here you can realize your dreams with what you can find from your social network.
+</p> -->
+  <% if user_signed_in? %>
+	<%= link_to "Query", queries_path, :class => "signup_button round" %>
+	<br/>
+	<%= link_to "Ontology", ontologies_path, :class => "signup_button round" %>
+	<% else %>
+	<%= link_to "Sign up now", new_user_registration_path, :class => "signup_button round" %>
+	<% end %>

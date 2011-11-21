@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  dream_id: 1
+  resource_id: 1
+
+two:
+  dream_id: 1
+  resource_id: 1

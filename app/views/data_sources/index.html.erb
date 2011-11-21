@@ -1,0 +1,33 @@
+<h1>Listing data_sources</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Hostname</th>
+    <th>Ip</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @data_sources.each do |data_source| %>
+  <tr>
+    <td><%= data_source.name %></td>
+    <td><%= data_source.hostname %></td>
+    <td><%= data_source.ip %></td>
+    <td><%= data_source.username %></td>
+    <td><%= data_source.password %></td>
+    <td><%= data_source.desc %></td>
+    <td><%= link_to 'Show', data_source %></td>
+    <td><%= link_to 'Edit', edit_data_source_path(data_source) %></td>
+    <td><%= link_to 'Destroy', data_source, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Data source', new_data_source_path %>

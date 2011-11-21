@@ -10,7 +10,84 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110719185605) do
+ActiveRecord::Schema.define(:version => 20111121160727) do
+
+  create_table "data_sources", :force => true do |t|
+    t.string   "name"
+    t.string   "hostname"
+    t.string   "ip"
+    t.string   "username"
+    t.string   "password"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "database_type"
+  end
+
+  create_table "field_mappings", :force => true do |t|
+    t.integer  "field_id"
+    t.integer  "data_source_id"
+    t.string   "field_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "field_properties", :force => true do |t|
+    t.integer  "field_id"
+    t.integer  "property_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fields", :force => true do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ontologies", :force => true do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ontology_fields", :force => true do |t|
+    t.integer  "ontology_id"
+    t.integer  "field_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ontology_mappings", :force => true do |t|
+    t.integer  "ontology_id"
+    t.integer  "data_source_id"
+    t.string   "ontology_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "properties", :force => true do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "queries", :force => true do |t|
+    t.string   "query_sentence"
+    t.text     "desc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "query_ontologies", :force => true do |t|
+    t.integer  "query_id"
+    t.integer  "ontology_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -25,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20110719185605) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

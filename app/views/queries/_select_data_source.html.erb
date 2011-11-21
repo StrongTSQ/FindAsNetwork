@@ -1,0 +1,3 @@
+<div class = 'select-datasource'>
+	Data source<%= select_tag  :data_source, options_for_select(DataSource.all.map{|source| [source.name,source.id]})%>
+</div>

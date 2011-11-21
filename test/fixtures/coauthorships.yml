@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_author: MyString
+  second_author: MyString
+  third_author: MyString
+  fourth_author: MyString
+  fifth_author: MyString
+  sixth_author: MyString
+  abstract: MyText
+  year: MyString
+
+two:
+  first_author: MyString
+  second_author: MyString
+  third_author: MyString
+  fourth_author: MyString
+  fifth_author: MyString
+  sixth_author: MyString
+  abstract: MyText
+  year: MyString

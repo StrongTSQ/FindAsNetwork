@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Field:</b>
+  <%= @field_mapping.field_id %>
+</p>
+
+<p>
+  <b>Data source:</b>
+  <%= @field_mapping.data_source_id %>
+</p>
+
+<p>
+  <b>Field name:</b>
+  <%= @field_mapping.field_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_field_mapping_path(@field_mapping) %> |
+<%= link_to 'Back', field_mappings_path %>

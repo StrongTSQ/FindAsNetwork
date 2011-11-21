@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  field_a: MyString
+  field_b: MyString
+  connections: MyString
+
+two:
+  field_a: MyString
+  field_b: MyString
+  connections: MyString

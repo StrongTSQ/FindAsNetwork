@@ -2,7 +2,8 @@
 #   gem install sqlite3
 development:
   adapter: mysql
-  database: find_development
+  database: odqis_development
+  pool: 30 
   host: localhost
   username: root
   password: 

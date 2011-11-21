@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  query_id: 
+  ontology_id: 
+
+two:
+  query_id: 
+  ontology_id: 

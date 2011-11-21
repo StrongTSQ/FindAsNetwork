@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  deadline: 2011-08-07
+  time: MyString
+  status: MyString
+
+two:
+  name: MyString
+  deadline: 2011-08-07
+  time: MyString
+  status: MyString

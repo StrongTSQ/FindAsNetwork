@@ -1,0 +1,27 @@
+1. The gross time of sequentially crawling 100 records is: 64.847199s ~ 1 min
+2. It takes about 100 min to crawl 10000 records ~ 1.5 hours
+3. It takes about 150 hours to crawl 1 million records ~ 150/24 = 6 days
+
+Improvement 1: Get IP address for the hostname in the url and use that for the following records.
+
+1. The gross time of sequentially crawling 100 records is: 50.840966 s
+2. It takes about 80 min to crawl 10000 records ~ 4/3 hours
+3. It takes about 400/3 hours to crawl 1 million records ~ 400/72 = 5 days
+
+Improvement 2: Multithread 10 threads work together to crawl 100 records
+
+1. The gross time of sequentially crawling 100 records is: 8 s
+2. It takes about 13.3 min to crawl 10000 records ~ 1/5 hours
+3. It takes about 20 hours to crawl 1 million records ~ 20 hours
+
+Improvement 3: Multithread 20 threads work together to crawl 1000 records
+begin-time = 56.22 end-time = 57.48
+1. The gross time of sequentially crawling 100 records is: 8.8 s
+2. It takes about 13.3 min to crawl 10000 records ~ 1/5 hours
+3. It takes about 20 hours to crawl 1 million records ~ 22 hours
+
+Improvement 4: Multithread 15 threads work together to crawl 750 records
+
+1. The gross time of sequentially crawling 100 records is: 7.5 s
+2. It takes about 12.5 min to crawl 10000 records ~ 1/5 hours
+3. It takes about 20 hours to crawl 1 million records ~ 22 hours 

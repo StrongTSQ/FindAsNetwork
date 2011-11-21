@@ -1,0 +1,26 @@
+<h1>build queries and execute them here</h1>
+
+<table>
+
+
+<% @queries.each do |query| %>
+  <tr>
+    <td><%= query.query_sentence %></td>
+    <td><%= query.desc %></td>
+    <td><%= link_to 'Show', query %></td>
+    <td><%= link_to 'Edit', edit_query_path(query) %></td>
+    <td><%= link_to 'Destroy', query, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'New Query', new_query_path %>
+<br/>
+<div>
+	
+	Query<%= text_field_tag 'query_sentence','', :size => 20 %>
+	
+	<br/><br/>
+	
+	<%= render :partial => 'select_data_source' %>
+	<%= submit_tag "Execute Query"%>
+</div>
